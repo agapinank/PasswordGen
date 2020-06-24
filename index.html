@@ -9,7 +9,7 @@
  <!-- Bootstrap CSS -->
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
   integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
+ <link rel="stylesheet" href="./style.css">
  <title>Random Password Generator</title>
 </head>
 
@@ -19,37 +19,43 @@
  </nav>
 
 <br>
-  <div class="card" style="width: 18rem;">
+  <div class="card-container" style="width: 18rem;">
    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Solex_99_30_padlock_with_keys_%28DSCF2659%29.jpg/300px-Solex_99_30_padlock_with_keys_%28DSCF2659%29.jpg"
     class="card-img-center" alt="javascript-random-password-generator">
    <div class="card-body">
     <h5 class="card-title">Password Generator</h5>
-    <div class="Results">
-     <textarea readonly id="Password" placeholder="Your Secure Password" aria-label= "Generated Password"></textarea> 
+    <div class="result-container">
+     <span id="result"></span>
+     <button class="btn" id="clipboard">
+      <i class="far fa-clipboard"></i>
+     </button>
     </div>
+
     <form>
      <div class="form-group">
       <label for="numOfCharacters"> Password Length (8-128)</label>
-      <input type="number" class="form-control"></input>
+      <input type="number" id="length" min="4" max="20" value="20"></input>
      </div>
      <div class="form-group form-check">
       <input type="checkbox" class="form-check-input" id="include-UpperCase"> </input>
-      <label class="form-check-label" for="include-UpperCase"> Include Uppercase</label>
+      <label class="form-check-label" for="include-UpperCase"> <span class="checkbox">Include Uppercase</span></label>
      </div>
      <div class="form-group form-check">
       <input type="checkbox" class="form-check-input" id="include-LowerCase"> </input>
-      <label class="form-check-label" for="include-LowerCase"> Include Lowercase</label>
+      <label class="form-check-label" for="include-LowerCase"><span class="checkbox"> Include Lowercase</span></label>
      </div>
      <div class="form-group form-check">
       <input type="checkbox" class="form-check-input" id="include-Numbers"> </input>
-      <label class="form-check-label" for="include-Numbers"> Include Numbers</label>
+      <label class="form-check-label" for="include-Numbers"> <span class="checkbox">Include Numbers</span></label>
      </div>
      <div class="form-group form-check">
       <input type="checkbox" class="form-check-input" id="include-Symbols"> </input>
-      <label class="form-check-label" for="include-Symbols"> Include Symbols</label>
+      <label class="form-check-label" for="include-Symbols"><span class="checkbox"> Include Symbols</span></label>
      </div>
     </form>
+    <div>
     <a href="#" class="btn btn-primary">Generate Password</a>
+    </div>
    </div>
   </div>
 
