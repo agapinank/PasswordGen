@@ -2,72 +2,84 @@
 <html lang="en">
 
 <head>
- <!-- Required meta tags -->
- <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
- <!-- Bootstrap CSS -->
- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
- <link rel="stylesheet" href="./style.css">
- <title>Random Password Generator</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="./style.css"> -->
+  <title>Random Password Generator</title>
 </head>
 
-<body>
- <nav class="navbar fixed-top navbar-light bg-light navbar ">
-  <a class="navbar-brand" href="#">Random Password</a>
- </nav>
-  <div class="card-container" style="width: 18rem;">
-   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Solex_99_30_padlock_with_keys_%28DSCF2659%29.jpg/300px-Solex_99_30_padlock_with_keys_%28DSCF2659%29.jpg"
-    class="card-img-center" alt="javascript-random-password-generator">
-   <div class="card-body">
+<body class="text-center">
+
+  <header class="masthead mb-auto">
+    <div class="inner">
+      <h3 class="masthead-brand">Create Your Random Password</h3>
+    </div>
+  </header>
+  <div class="card-container">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Solex_99_30_padlock_with_keys_%28DSCF2659%29.jpg/300px-Solex_99_30_padlock_with_keys_%28DSCF2659%29.jpg"
+      class="img-fluid" alt="javascript-random-password-generator">
     <h5 class="card-title">Password Generator</h5>
+   
     <div class="result-container">
-     <span id="result"></span>
-     <button class="btn" id="clipboard">
-      <i class="far fa-clipboard"></i>
-     </button>
+      <span id="result"></span>
+      <button class="btn" id="clipboard">
+        <i class="far fa-clipboard"></i>
+      </button>
     </div>
 
-    <form>
-     <div class="form-group">
-      <label for="numOfCharacters"> Password Length (8-128)</label>
-      <input type="number" id="length" min="4" max="20" value="20"></input>
-     </div>
-     <div class="form-group form-check">
-      <input type="checkbox" class="form-check-input" id="upperCase"> </input>
-      <label class="form-check-label" for="include-UpperCase"> <span class="checkbox">Include Uppercase</span></label>
-     </div>
-     <div class="form-group form-check">
-      <input type="checkbox" class="form-check-input" id="lowerCase"> </input>
-      <label class="form-check-label" for="include-LowerCase"><span class="checkbox"> Include Lowercase</span></label>
-     </div>
-     <div class="form-group form-check">
-      <input type="checkbox" class="form-check-input" id="numbers"> </input>
-      <label class="form-check-label" for="include-Numbers"> <span class="checkbox">Include Numbers</span></label>
-     </div>
-     <div class="form-group form-check">
-      <input type="checkbox" class="form-check-input" id="symbols"> </input>
-      <label class="form-check-label" for="include-Symbols"><span class="checkbox"> Include Symbols</span></label>
-     </div>
-    </form>
+    <ul class='card-body'>
+      <li class="form-group">
+        <label for="numOfCharacters"> Password Length (4-20 characters) </label>
+        <input type="number" id="length" min="4" max="20" value="20"></input>
+      </li>
+
+      <li class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="upperCase"> </input>
+        <label class="form-check-label" for="include-UpperCase"> <span class="checkbox">Include Uppercase</span></label>
+      </li>
+
+      <li class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="lowerCase"> </input>
+        <label class="form-check-label" for="include-LowerCase"><span class="checkbox"> Include Lowercase</span></label>
+      </li>
+
+      <li class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="numbers"> </input>
+        <label class="form-check-label" for="include-Numbers"> <span class="checkbox">Include Numbers</span></label>
+      </li>
+
+      <li class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="symbols"> </input>
+        <label class="form-check-label" for="include-Symbols"><span class="checkbox"> Include Symbols</span></label>
+      </li>
+
+  
     <div>
-    <a href="#" class="btn btn-primary">Generate Password</a>
+      <a href="#" class="btn btn-primary" id="generate"> Generate Password</a>
     </div>
-   </div>
-  </div>
-<nav class="navbar fixed-bottom navbar-light bg-light">
- <a class="navbar-brand" href="#">Have a great day!</a>
-</nav>
- <!-- Optional JavaScript -->
- <script>"./script.js"</script>
- <!-- jQuery first, then Popper.js, then Bootstrap JS -->
- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-  integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </ul>
+
+  <footer class="mastfood mt-auto">
+    <p class="text-center">Have a great day!</p>
+  </footer>
+  <!-- Optional JavaScript -->
+  <script src="./script.js"></script>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
