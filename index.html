@@ -13,23 +13,21 @@
   <title>Random Password Generator</title>
 </head>
 
-<body class="text-center">
-  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+<body class="text-center justify-content-center">
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto">
 
-    <header class="masthead mb-auto">
+    <div class="jumbotron">
       <div class="inner  justify-content-center">
-        <nav class="nav nav-masthead justify-content-center">
           <img
             src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/facebook/65/closed-lock-with-key_1f510.png"
             class="img" alt="javascript-random-password-generator">
-        </nav>
       </div>
+    </div>
 
-    </header>
     <main role="main" class='inner-cover'>
 
       <div class='container'>
-          <h3 class="card-title" id="picture">Password Generator</h3>
+        <h3 class="card-title" id="picture">Password Generator</h3>
         <div class='results-container'>
           <span id="results"></span>
           <button class="btn" id="clipboard">
@@ -42,47 +40,50 @@
             </svg>
           </button>
         </div>
-      <br>
-          <div class="require">
-            <label for="numOfCharacters"> Password Length (4-20 characters) </label>
-            <input type="number" id="length" min="4" max="20"></input>
-          </div>
+        <br>
+        <div class="form-list">
+        <div class="require">
+          <label for="numOfCharacters"> Password Length (4-20 characters) </label>
+          <input type="number" id="length" min="4" max="20"></input>
+        </div>
 
-          <div class="require">
-            <label for="include-UpperCase"> <span class="checkbox">Include
-                Uppercase</span></label>
-            <input type="checkbox" id="uppercase" value="uppercase" checked></input>
-          </div>
+        <div class="require">
+          <label for="include-UpperCase"> <span class="checkbox">Include
+              Uppercase</span></label>
+          <input type="checkbox" id="uppercase" value="uppercase" checked></input>
+        </div>
 
-          <div class="require">
-            <label for="include-lowercase"><span class="checkbox"> Include
-                Lowercase</span></label>
-            <input type="checkbox" id="lowercase" checked></input>
-          </div>
+        <div class="require">
+          <label for="include-lowercase"><span class="checkbox"> Include
+              Lowercase</span></label>
+          <input type="checkbox" id="lowercase" checked></input>
+        </div>
 
-          <div class="require">
-            <label for="include-Numbers"> <span class="checkbox">Include Numbers</span></label>
-            <input type="checkbox" id="numbers" value="number" checked></input>
-          </div>
+        <div class="require">
+          <label for="include-Numbers"> <span class="checkbox">Include Numbers</span></label>
+          <input type="checkbox" id="numbers" value="number" checked></input>
+        </div>
 
-          <div class="require">
-            <label for="include-Symbols"><span class="checkbox"> Include Symbols</span></label>
-            <input type="checkbox" id="symbols" value="symbols" checked></input>
-          </div>
-
-          <p>
-            <a href="#" class="btn btn-primary" id="generate"> Generate Password</a>
-          </p>
-
+        <div class="require">
+          <label for="include-Symbols"><span class="checkbox"> Include Symbols</span></label>
+          <input type="checkbox" id="symbols" value="symbols" checked></input>
+        </div>
+        <div>
+        <p>
+          <a href="#" class="btn btn-primary" id="generate"> Generate Password</a>
+        </p>
+        </div> 
       </div>
     </main>
-
-    <footer class="mastfoot mt-auto">
-      <div class="inner">
-        <p class="text-center">Have a great day!</p>
-      </div>
-    </footer>
+    
   </div>
+  <footer class="footer fixed-bottom">
+    <p class='text-center'>
+      Made By Kasey Agapinan
+    </p>
+  </footer>
+
+
   <!-- Optional JavaScript -->
   <script src="./script.js"></script>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
