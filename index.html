@@ -9,77 +9,92 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <!-- <link rel="stylesheet" href="./style.css"> -->
+  <link rel="stylesheet" href="./style.css">
   <title>Random Password Generator</title>
 </head>
 
 <body class="text-center">
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 
-  <header class="masthead mb-auto">
-    <div class="inner">
-      <h3 class="masthead-brand">Create Your Random Password</h3>
-    </div>
-  </header>
-  <div class="card-container">
-    <img
-      src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Solex_99_30_padlock_with_keys_%28DSCF2659%29.jpg/300px-Solex_99_30_padlock_with_keys_%28DSCF2659%29.jpg"
-      class="img-fluid" alt="javascript-random-password-generator">
-    <h5 class="card-title">Password Generator</h5>
-   
-    <div class="result-container">
-      <span id="result"></span>
-      <button class="btn" id="clipboard">
-        <i class="far fa-clipboard"></i>
-      </button>
-    </div>
+    <header class="masthead mb-auto">
+      <div class="inner  justify-content-center">
+        <nav class="nav nav-masthead justify-content-center">
+          <img
+            src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/facebook/65/closed-lock-with-key_1f510.png"
+            class="img" alt="javascript-random-password-generator">
+        </nav>
+      </div>
 
-    <ul class='card-body'>
-      <li class="form-group">
-        <label for="numOfCharacters"> Password Length (4-20 characters) </label>
-        <input type="number" id="length" min="4" max="20" value="20"></input>
-      </li>
+    </header>
+    <main role="main" class='inner-cover'>
 
-      <li class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="upperCase"> </input>
-        <label class="form-check-label" for="include-UpperCase"> <span class="checkbox">Include Uppercase</span></label>
-      </li>
+      <div class='container'>
+          <h3 class="card-title" id="picture">Password Generator</h3>
+        <div class='results-container'>
+          <span id="results"></span>
+          <button class="btn" id="clipboard">
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-clipboard" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+              <path fill-rule="evenodd"
+                d="M9.5 1h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+            </svg>
+          </button>
+        </div>
+      <br>
+          <div class="require">
+            <label for="numOfCharacters"> Password Length (4-20 characters) </label>
+            <input type="number" id="length" min="4" max="20"></input>
+          </div>
 
-      <li class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="lowerCase"> </input>
-        <label class="form-check-label" for="include-LowerCase"><span class="checkbox"> Include Lowercase</span></label>
-      </li>
+          <div class="require">
+            <label for="include-UpperCase"> <span class="checkbox">Include
+                Uppercase</span></label>
+            <input type="checkbox" id="uppercase" value="uppercase" checked></input>
+          </div>
 
-      <li class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="numbers"> </input>
-        <label class="form-check-label" for="include-Numbers"> <span class="checkbox">Include Numbers</span></label>
-      </li>
+          <div class="require">
+            <label for="include-lowercase"><span class="checkbox"> Include
+                Lowercase</span></label>
+            <input type="checkbox" id="lowercase" checked></input>
+          </div>
 
-      <li class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="symbols"> </input>
-        <label class="form-check-label" for="include-Symbols"><span class="checkbox"> Include Symbols</span></label>
-      </li>
+          <div class="require">
+            <label for="include-Numbers"> <span class="checkbox">Include Numbers</span></label>
+            <input type="checkbox" id="numbers" value="number" checked></input>
+          </div>
 
-  
-    <div>
-      <a href="#" class="btn btn-primary" id="generate"> Generate Password</a>
-    </div>
-  </ul>
+          <div class="require">
+            <label for="include-Symbols"><span class="checkbox"> Include Symbols</span></label>
+            <input type="checkbox" id="symbols" value="symbols" checked></input>
+          </div>
 
-  <footer class="mastfood mt-auto">
-    <p class="text-center">Have a great day!</p>
-  </footer>
+          <p>
+            <a href="#" class="btn btn-primary" id="generate"> Generate Password</a>
+          </p>
+
+      </div>
+    </main>
+
+    <footer class="mastfoot mt-auto">
+      <div class="inner">
+        <p class="text-center">Have a great day!</p>
+      </div>
+    </footer>
+  </div>
   <!-- Optional JavaScript -->
   <script src="./script.js"></script>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-    crossorigin="anonymous"></script>
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

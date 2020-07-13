@@ -1,12 +1,13 @@
 //variable assigned to document method set to return selected element ID
-const resultEl = document.getElementById('result');
+const resultEl = document.getElementById('results');
 const lengthEl = document.getElementById('length');
-const upperCase = document.getElementById('uppercase');
-const lowerCase = document.getElementById('lowercase');
+const upperCaseEl = document.getElementById('uppercase');
+const lowerCaseEl = document.getElementById('lowercase');
 const numbersEl = document.getElementById('numbers');
 const symbolsEl = document.getElementById('symbols');
 const generateEl = document.getElementById('generate');
 const clipboard = document.getElementById('clipboard');
+
 // variable assigned object.properties value random functions
 const randomFunc = {
   lower: getRandomLower,
@@ -17,8 +18,8 @@ const randomFunc = {
 
 //on click clipboard btn
 clipboard.addEventListener('click', () => {
-  const textarea = document.getElement('textarea');
-  const password = resultEl.innerText;
+  const textarea = document.createElement('textarea');
+  const password = resultEl.innerText();
 
   if (!password) {
     return;
@@ -33,19 +34,13 @@ clipboard.addEventListener('click', () => {
 });
 
 generate.addEventListener('click', () => {
-  const length = +lengthEl.value;
-  const hasLower = lowercaseEl.checked;
-  const hasUpper = uppercaseEl.checked;
-  const hasNumber = numbersEl.checked;
-  const hasSymbol = symbolEl.checked;
+  const length = lengthEl.value;
+  const hasLower = lowerCaseEl.checked;
+  const hasUpper = upperCaseEl.checked;
+  const hasNumber = numbers.checked;
+  const hasSymbol = symbols.checked;
 
-  resultsEl.innerText = generatePassword(
-    hasLower,
-    hasUpper,
-    hasNumber,
-    hasSymbol,
-    length
-  );
+  resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, length);
 });
 
 function generatePassword(lower, upper, number, symbol, length) {
